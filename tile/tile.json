@@ -1,0 +1,8 @@
+{
+  "name": "guydemo/mathjs",
+  "version": "15.1.0",
+  "docs": "docs/index.md",
+  "describes": "pkg:npm/mathjs@15.1.0",
+  "summary": "Math.js is an extensive math library for JavaScript and Node.js featuring a flexible expression parser with symbolic computation, support for multiple data types (numbers, big numbers, complex numbers, fractions, units, matrices), and 200+ built-in mathematical functions.",
+  "private": true
+}

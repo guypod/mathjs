@@ -1,0 +1,41 @@
+{
+  "context": "This criteria evaluates how effectively an engineer uses the mathjs library to implement symbolic computation, unit-aware calculations with conversions, and symbolic differentiation. The focus is on proper usage of mathjs-specific functions and methods rather than general coding practices.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "Simplify function usage",
+      "description": "Uses math.simplify() function to algebraically simplify mathematical expressions. Should parse the input expression and return the simplified result as a string using toString() or similar method.",
+      "max_score": 20
+    },
+    {
+      "name": "Unit creation",
+      "description": "Uses math.unit() or math.evaluate() to create and work with units. Should properly parse expressions containing units (like '100 km', '2 hours') and perform calculations that preserve unit information.",
+      "max_score": 15
+    },
+    {
+      "name": "Unit arithmetic",
+      "description": "Performs arithmetic operations on unit objects (addition, subtraction, multiplication, division) using mathjs unit operations. Should correctly handle compound units like 'km/hour' or 'm/s^2'.",
+      "max_score": 15
+    },
+    {
+      "name": "Unit conversion",
+      "description": "Uses the to() method or toNumeric() method on unit objects to convert between compatible units. Should handle conversions like 'km/h' to 'm/s' correctly.",
+      "max_score": 15
+    },
+    {
+      "name": "Unit output format",
+      "description": "Properly formats unit output as a string using toString(), format(), or similar methods. Should return results in the format 'value unit' (e.g., '50 km/h').",
+      "max_score": 10
+    },
+    {
+      "name": "Derivative computation",
+      "description": "Uses math.derivative() function to compute symbolic derivatives. Should parse the expression, compute the derivative with respect to the specified variable, and return the result.",
+      "max_score": 15
+    },
+    {
+      "name": "Conditional simplification",
+      "description": "Implements the optional simplify parameter in computeDerivative by conditionally calling math.simplify() on the derivative result when the simplify flag is true.",
+      "max_score": 10
+    }
+  ]
+}
