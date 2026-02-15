@@ -1,0 +1,22 @@
+{
+  "context": "Evaluates the use of mathjs expression parsing and evaluation capabilities with variable scopes.",
+  "type": "weighted_checklist",
+  "capability_tested": "Expression Parsing and Evaluation",
+  "checklist": [
+    {
+      "name": "expression parsing",
+      "description": "Uses parse() or compile() to parse the mathematical expression string",
+      "max_score": 30
+    },
+    {
+      "name": "variable scope",
+      "description": "Correctly passes the variables object as the scope parameter for evaluation",
+      "max_score": 35
+    },
+    {
+      "name": "evaluation",
+      "description": "Uses evaluate() or compiled expression to compute the result",
+      "max_score": 35
+    }
+  ]
+}

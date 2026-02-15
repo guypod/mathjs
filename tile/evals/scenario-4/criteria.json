@@ -1,0 +1,27 @@
+{
+  "context": "Evaluates the use of mathjs complex number operations including creation, arithmetic, and property extraction.",
+  "type": "weighted_checklist",
+  "capability_tested": "Complex Number Operations",
+  "checklist": [
+    {
+      "name": "complex creation",
+      "description": "Uses complex() to create complex numbers from strings or components",
+      "max_score": 25
+    },
+    {
+      "name": "complex arithmetic",
+      "description": "Uses add() and multiply() for complex number arithmetic operations",
+      "max_score": 30
+    },
+    {
+      "name": "conjugate operation",
+      "description": "Uses conj() to compute the complex conjugate",
+      "max_score": 20
+    },
+    {
+      "name": "property extraction",
+      "description": "Uses abs() or arg() to extract magnitude and phase angle",
+      "max_score": 25
+    }
+  ]
+}

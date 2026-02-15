@@ -1,0 +1,22 @@
+{
+  "context": "Evaluates the use of mathjs expression tree manipulation to parse and analyze the structure of mathematical expressions.",
+  "type": "weighted_checklist",
+  "capability_tested": "Expression Tree Manipulation",
+  "checklist": [
+    {
+      "name": "parsing to AST",
+      "description": "Uses parse() to convert the expression string into an abstract syntax tree",
+      "max_score": 25
+    },
+    {
+      "name": "tree traversal",
+      "description": "Uses traverse() or filter() to visit nodes in the expression tree",
+      "max_score": 35
+    },
+    {
+      "name": "node type checking",
+      "description": "Checks node types using properties like node.type or type-checking methods (isOperatorNode, isSymbolNode, isFunctionNode)",
+      "max_score": 40
+    }
+  ]
+}

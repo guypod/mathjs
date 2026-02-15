@@ -1,0 +1,22 @@
+{
+  "context": "Evaluates the use of mathjs matrix decomposition functions to solve linear systems efficiently.",
+  "type": "weighted_checklist",
+  "capability_tested": "Matrix Decompositions",
+  "checklist": [
+    {
+      "name": "matrix creation",
+      "description": "Uses matrix() to create matrix objects from arrays",
+      "max_score": 15
+    },
+    {
+      "name": "decomposition",
+      "description": "Uses lup() to compute LU decomposition with partial pivoting",
+      "max_score": 45
+    },
+    {
+      "name": "system solving",
+      "description": "Uses lusolve() to solve the linear system using the decomposition",
+      "max_score": 40
+    }
+  ]
+}

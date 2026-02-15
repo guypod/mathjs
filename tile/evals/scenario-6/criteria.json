@@ -1,0 +1,27 @@
+{
+  "context": "Evaluates the use of mathjs matrix creation and manipulation functions including construction, transposition, and reshaping.",
+  "type": "weighted_checklist",
+  "capability_tested": "Matrix Creation and Manipulation",
+  "checklist": [
+    {
+      "name": "matrix creation",
+      "description": "Uses matrix(), zeros(), ones(), or similar functions to create matrices",
+      "max_score": 30
+    },
+    {
+      "name": "transpose operation",
+      "description": "Uses transpose() to transpose matrices",
+      "max_score": 30
+    },
+    {
+      "name": "element access",
+      "description": "Uses subset() or array indexing to access matrix elements",
+      "max_score": 20
+    },
+    {
+      "name": "reshape operation",
+      "description": "Uses reshape() to change matrix dimensions",
+      "max_score": 20
+    }
+  ]
+}

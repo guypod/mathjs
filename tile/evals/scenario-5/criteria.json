@@ -1,0 +1,22 @@
+{
+  "context": "Evaluates the use of mathjs unit system for creating physical quantities, performing conversions, and arithmetic with automatic unit tracking.",
+  "type": "weighted_checklist",
+  "capability_tested": "Unit Conversion and Arithmetic",
+  "checklist": [
+    {
+      "name": "unit creation",
+      "description": "Uses unit() to create physical quantities with units",
+      "max_score": 30
+    },
+    {
+      "name": "unit conversion",
+      "description": "Uses to() method or function to convert between compatible units",
+      "max_score": 35
+    },
+    {
+      "name": "unit arithmetic",
+      "description": "Performs arithmetic operations with automatic unit tracking and simplification",
+      "max_score": 35
+    }
+  ]
+}

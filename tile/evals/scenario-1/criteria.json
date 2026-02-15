@@ -1,0 +1,22 @@
+{
+  "context": "Evaluates the use of mathjs chaining API to create fluent computation pipelines.",
+  "type": "weighted_checklist",
+  "capability_tested": "Chaining Operations",
+  "checklist": [
+    {
+      "name": "chain initialization",
+      "description": "Uses chain() to initialize the chainable computation",
+      "max_score": 30
+    },
+    {
+      "name": "operation chaining",
+      "description": "Chains multiple operations together using the fluent API methods",
+      "max_score": 40
+    },
+    {
+      "name": "result extraction",
+      "description": "Uses done() or valueOf() to extract the final result from the chain",
+      "max_score": 30
+    }
+  ]
+}
