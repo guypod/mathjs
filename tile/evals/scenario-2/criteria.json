@@ -1,0 +1,22 @@
+{
+  "context": "Evaluates the use of mathjs bitwise operations for bit manipulation tasks.",
+  "type": "weighted_checklist",
+  "capability_tested": "Bitwise Operations",
+  "checklist": [
+    {
+      "name": "setBit implementation",
+      "description": "Uses bitOr() with leftShift() to set a specific bit to 1",
+      "max_score": 30
+    },
+    {
+      "name": "clearBit implementation",
+      "description": "Uses bitAnd() with bitNot() and leftShift() to clear a specific bit to 0",
+      "max_score": 30
+    },
+    {
+      "name": "extractBits implementation",
+      "description": "Uses rightArithShift() or rightLogShift() and bitAnd() to extract bit ranges",
+      "max_score": 40
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "context": "Evaluates the correct use of mathjs statistical functions to compute descriptive statistics for datasets.",
+  "type": "weighted_checklist",
+  "capability_tested": "Statistical Functions",
+  "checklist": [
+    {
+      "name": "mean calculation",
+      "description": "Uses the mean() function correctly to compute arithmetic average",
+      "max_score": 20
+    },
+    {
+      "name": "median calculation",
+      "description": "Uses the median() function correctly to find the middle value",
+      "max_score": 20
+    },
+    {
+      "name": "mode calculation",
+      "description": "Uses the mode() function correctly to find the most frequent value",
+      "max_score": 20
+    },
+    {
+      "name": "std calculation",
+      "description": "Uses the std() function correctly to compute standard deviation",
+      "max_score": 20
+    },
+    {
+      "name": "variance calculation",
+      "description": "Uses the variance() function correctly to compute statistical variance",
+      "max_score": 20
+    }
+  ]
+}

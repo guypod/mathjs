@@ -1,0 +1,8 @@
+{
+  "name": "guydemo/mathjs",
+  "version": "15.1.0",
+  "docs": "docs/index.md",
+  "describes": "pkg:npm/mathjs@15.1.0",
+  "summary": "Extensive mathematical computation library for JavaScript with support for symbolic computation, multiple numeric types, matrices, and a powerful expression parser",
+  "private": true
+}

@@ -1,0 +1,27 @@
+{
+  "context": "Evaluates the use of mathjs symbolic differentiation capabilities to compute derivatives of mathematical expressions.",
+  "type": "weighted_checklist",
+  "capability_tested": "Symbolic Differentiation",
+  "checklist": [
+    {
+      "name": "expression parsing",
+      "description": "Uses parse() to convert the expression string into an expression tree",
+      "max_score": 20
+    },
+    {
+      "name": "derivative computation",
+      "description": "Uses derivative() to compute the symbolic derivative with respect to the variable",
+      "max_score": 50
+    },
+    {
+      "name": "simplification",
+      "description": "Uses simplify() to simplify the derivative expression",
+      "max_score": 20
+    },
+    {
+      "name": "string output",
+      "description": "Converts the result to a string using toString() or similar",
+      "max_score": 10
+    }
+  ]
+}
