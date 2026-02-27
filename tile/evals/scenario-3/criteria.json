@@ -1,0 +1,32 @@
+{
+  "context": "This criteria evaluates correct usage of the library's complex number API, including construction, arithmetic operations, and magnitude calculation. It checks that complex() is used to create complex numbers from re/im components and that results are correctly extracted back to plain objects.",
+  "type": "weighted_checklist",
+  "capability_tested": "Complex Number Operations",
+  "checklist": [
+    {
+      "name": "Uses complex() constructor",
+      "description": "The implementation uses the library's complex() function to create complex number instances from re/im components rather than implementing complex arithmetic manually.",
+      "max_score": 30
+    },
+    {
+      "name": "Uses library arithmetic functions",
+      "description": "Operations like addition and multiplication are performed using the library's add() and multiply() functions (or equivalent) on complex instances, not manual formula implementations.",
+      "max_score": 25
+    },
+    {
+      "name": "Uses abs() for magnitude",
+      "description": "The complexMagnitude function uses the library's abs() function on a complex number to compute the magnitude, returning a plain number.",
+      "max_score": 20
+    },
+    {
+      "name": "Handles sqrt of negative numbers",
+      "description": "complexSqrt() correctly produces a result with a non-zero imaginary part when given a negative real number, using the library's sqrt() which handles complex outputs.",
+      "max_score": 15
+    },
+    {
+      "name": "Returns plain objects",
+      "description": "All functions that return complex results extract re and im properties into plain { re, im } JavaScript objects.",
+      "max_score": 10
+    }
+  ]
+}

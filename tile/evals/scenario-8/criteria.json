@@ -1,0 +1,32 @@
+{
+  "context": "This criteria evaluates correct usage of the library's symbolic differentiation API. It checks that derivative() is called with the correct arguments to produce a symbolic result, that the result node is converted to a string via toString() or simplified, and that evaluate() is used to compute the numeric value at a specific point.",
+  "type": "weighted_checklist",
+  "capability_tested": "Symbolic Differentiation",
+  "checklist": [
+    {
+      "name": "Uses derivative() for symbolic diff",
+      "description": "The implementation calls the library's derivative() function with the expression and variable to produce a MathNode representing the symbolic derivative, not a numerical approximation.",
+      "max_score": 35
+    },
+    {
+      "name": "Converts result to string",
+      "description": "differentiate() converts the derivative MathNode to a string using .toString() on the node, and returns that string.",
+      "max_score": 20
+    },
+    {
+      "name": "Evaluates derivative at a point",
+      "description": "evaluateDerivative() evaluates the derivative node at the specified point by calling .evaluate() on the node with the correct scope (e.g. { x: point }).",
+      "max_score": 25
+    },
+    {
+      "name": "Correct derivative expressions",
+      "description": "The symbolic derivatives are mathematically correct: d/dx(x^2 + x) yields 2*x + 1, d/dx(sin(x)) yields cos(x), etc.",
+      "max_score": 10
+    },
+    {
+      "name": "Correct numeric evaluation",
+      "description": "evaluateDerivative() returns the correct numeric value: 3*x^2 at x=2 is 12, (2*x + 3) at x=0 is 3, etc.",
+      "max_score": 10
+    }
+  ]
+}

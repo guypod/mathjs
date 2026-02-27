@@ -1,0 +1,32 @@
+{
+  "context": "This criteria evaluates correct usage of the library's BigNumber support and configuration API. It checks that the implementation properly configures the precision, uses the BigNumber number type (not standard floating-point), and returns a string result reflecting the configured precision.",
+  "type": "weighted_checklist",
+  "capability_tested": "BigNumber Arithmetic",
+  "checklist": [
+    {
+      "name": "Configures precision via config()",
+      "description": "The implementation calls config() with the number type set to 'BigNumber' and the precision set to the given value before evaluation.",
+      "max_score": 35
+    },
+    {
+      "name": "Uses BigNumber evaluation",
+      "description": "The expression is evaluated in a context that produces BigNumber results, not standard JavaScript numbers, so that precision beyond 15-17 digits is preserved.",
+      "max_score": 25
+    },
+    {
+      "name": "Returns string representation",
+      "description": "The result is converted to a string (e.g. via .toString()) before being returned, not returned as a BigNumber object.",
+      "max_score": 15
+    },
+    {
+      "name": "Precision reflected in result",
+      "description": "Irrational results (e.g. 1/3, sqrt(2)) contain the correct number of significant digits as specified by the precision parameter.",
+      "max_score": 15
+    },
+    {
+      "name": "Avoids floating-point errors",
+      "description": "Expressions like 0.1 + 0.2 return exact results (0.3) rather than floating-point artifacts (0.30000000000000004).",
+      "max_score": 10
+    }
+  ]
+}

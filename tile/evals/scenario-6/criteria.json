@@ -1,0 +1,32 @@
+{
+  "context": "This criteria evaluates correct usage of the library's linear algebra functions for solving linear systems and computing matrix properties. It checks that lusolve(), det(), and inv() are used appropriately and that results are correctly extracted as plain JavaScript arrays and numbers.",
+  "type": "weighted_checklist",
+  "capability_tested": "Linear Algebra Operations",
+  "checklist": [
+    {
+      "name": "Uses lusolve() for linear system",
+      "description": "solveLinearSystem uses the library's lusolve() function (or equivalent like lup() + lusolve()) to solve the system Ax = b, not a manual elimination algorithm.",
+      "max_score": 30
+    },
+    {
+      "name": "Uses det() for determinant",
+      "description": "matrixDeterminant uses the library's det() function to compute the determinant of the matrix.",
+      "max_score": 20
+    },
+    {
+      "name": "Uses inv() for matrix inverse",
+      "description": "matrixInverse uses the library's inv() function to compute the inverse matrix.",
+      "max_score": 20
+    },
+    {
+      "name": "Returns plain arrays/numbers",
+      "description": "All functions return plain JavaScript arrays and numbers (not Matrix objects), correctly converting using toArray(), valueOf(), or equivalent.",
+      "max_score": 15
+    },
+    {
+      "name": "Correct numerical results",
+      "description": "All provided test cases produce numerically correct results within reasonable floating-point tolerance.",
+      "max_score": 15
+    }
+  ]
+}
