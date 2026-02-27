@@ -1,0 +1,32 @@
+{
+  "context": "This criteria evaluates correct usage of the library's statistical functions. It checks that dedicated statistical functions (mean, median, std, variance, min, max, sum, quantileSeq) are used rather than manual implementations, and that the results are returned as plain numbers.",
+  "type": "weighted_checklist",
+  "capability_tested": "Statistical Functions",
+  "checklist": [
+    {
+      "name": "Uses library statistical functions",
+      "description": "describeDataset uses the library's mean(), median(), std(), variance(), min(), max(), and sum() functions rather than implementing these calculations manually.",
+      "max_score": 40
+    },
+    {
+      "name": "Uses quantileSeq() for quantile",
+      "description": "The quantile() function uses the library's quantileSeq() function to compute the specified quantile, not a manual sorting/interpolation approach.",
+      "max_score": 25
+    },
+    {
+      "name": "Returns plain numbers",
+      "description": "All properties in the returned object are plain JavaScript numbers, not library-specific BigNumber or other typed values.",
+      "max_score": 15
+    },
+    {
+      "name": "Correct statistical values",
+      "description": "All statistical values (mean, median, std, variance, min, max, sum) are correctly computed for the given test datasets.",
+      "max_score": 15
+    },
+    {
+      "name": "Returns all required properties",
+      "description": "The describeDataset return object contains all seven required properties: mean, median, std, min, max, sum, and variance.",
+      "max_score": 5
+    }
+  ]
+}

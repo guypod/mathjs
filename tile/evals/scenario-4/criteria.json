@@ -1,0 +1,32 @@
+{
+  "context": "This criteria evaluates correct usage of the library's unit system for creating unit-aware values, performing conversions with the to() function, and extracting plain numeric values. It checks that unit() is used to create unit instances and that conversions are performed via the library's built-in unit conversion.",
+  "type": "weighted_checklist",
+  "capability_tested": "Unit Conversion and Arithmetic",
+  "checklist": [
+    {
+      "name": "Uses unit() to create unit values",
+      "description": "The implementation uses the library's unit() function to create unit-aware values (e.g. unit(5, 'km')) rather than performing manual conversion calculations.",
+      "max_score": 30
+    },
+    {
+      "name": "Uses to() for conversion",
+      "description": "Unit conversion is performed by calling .to(targetUnit) on a unit instance, leveraging the library's built-in conversion logic.",
+      "max_score": 25
+    },
+    {
+      "name": "Extracts plain number correctly",
+      "description": "The numeric value is correctly extracted from the unit result (e.g. via .toNumber() or .value) and returned as a plain JavaScript number.",
+      "max_score": 20
+    },
+    {
+      "name": "Handles mixed-unit addition",
+      "description": "addWithUnits correctly creates unit instances for both operands, adds them (using the library's add()), and converts the result back to the first operand's unit before returning.",
+      "max_score": 15
+    },
+    {
+      "name": "Handles temperature conversion",
+      "description": "Temperature unit conversion (e.g. celsius to fahrenheit) is handled correctly, which requires an offset transformation (not just a scale factor).",
+      "max_score": 10
+    }
+  ]
+}

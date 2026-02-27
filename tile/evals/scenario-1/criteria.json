@@ -1,0 +1,32 @@
+{
+  "context": "This criteria evaluates correct usage of the library's chaining API to apply sequential operations. It checks that chain() is used to start the chain, that operations are applied as method calls on the chain object, and that done() is called to extract the final value.",
+  "type": "weighted_checklist",
+  "capability_tested": "Chaining Operations",
+  "checklist": [
+    {
+      "name": "Uses chain() to start",
+      "description": "The implementation calls chain(start) to initiate a chain wrapping the starting value, rather than applying operations imperatively.",
+      "max_score": 30
+    },
+    {
+      "name": "Calls done() at end",
+      "description": "The chain is finalized by calling .done() to extract the numeric result from the chain wrapper.",
+      "max_score": 20
+    },
+    {
+      "name": "Operations applied as chain methods",
+      "description": "Each operation (add, subtract, multiply, divide, pow, sqrt, abs) is applied as a method call on the chain object, chaining them sequentially.",
+      "max_score": 25
+    },
+    {
+      "name": "Correct results for all operations",
+      "description": "All supported operation types (add, subtract, multiply, divide, pow, sqrt, abs) produce correct results when applied via the chain.",
+      "max_score": 15
+    },
+    {
+      "name": "Handles empty operations array",
+      "description": "When the operations array is empty, the function returns the start value unchanged.",
+      "max_score": 10
+    }
+  ]
+}

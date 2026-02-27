@@ -1,0 +1,32 @@
+{
+  "context": "This criteria evaluates correct usage of the library's extensibility API for creating custom math instances and registering new functions. It checks that create() is used to create a custom instance, that import() is used to add new functions, and that the new functions correctly leverage the instance's built-in functions internally.",
+  "type": "weighted_checklist",
+  "capability_tested": "Custom Instance Creation and Extension",
+  "checklist": [
+    {
+      "name": "Uses create() for custom instance",
+      "description": "createCustomMath() uses the library's create() function to instantiate a new math instance rather than using the default instance or manually constructing one.",
+      "max_score": 30
+    },
+    {
+      "name": "Uses import() to register functions",
+      "description": "The new functions (clamp, degToRad, average) are registered on the custom instance using its import() method, making them accessible as first-class methods on the instance.",
+      "max_score": 30
+    },
+    {
+      "name": "Functions use instance's built-ins",
+      "description": "The custom functions use the math instance's own functions internally (e.g. math.max, math.min, math.pi, math.mean) rather than standalone imports or manual implementations.",
+      "max_score": 20
+    },
+    {
+      "name": "Standard functions still available",
+      "description": "The returned custom instance retains all standard mathjs functions (e.g. add, sqrt, evaluate still work on the returned instance).",
+      "max_score": 10
+    },
+    {
+      "name": "Correct behavior of custom functions",
+      "description": "clamp, degToRad, and average all produce correct results: clamp(15, 0, 10) = 10, degToRad(180) ≈ π, average(1,2,3,4,5) = 3.",
+      "max_score": 10
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "context": "This criteria evaluates correct usage of the library's expression evaluation API to parse and compute mathematical expressions from strings. It checks that the implementation properly passes a scope/variables object to the evaluation call and that all supported expression types produce correct results.",
+  "type": "weighted_checklist",
+  "capability_tested": "Expression Evaluation",
+  "checklist": [
+    {
+      "name": "Uses evaluate API",
+      "description": "The implementation calls the library's expression evaluation function (evaluate or compile+evaluate) to process expression strings rather than implementing its own parser.",
+      "max_score": 30
+    },
+    {
+      "name": "Passes scope correctly",
+      "description": "The variables object is correctly passed as the scope argument to the evaluate call so that variable names resolve to the given values.",
+      "max_score": 25
+    },
+    {
+      "name": "Handles no-variable expressions",
+      "description": "Expressions with no variables (pure numeric expressions including built-in functions) evaluate to the correct result.",
+      "max_score": 20
+    },
+    {
+      "name": "Handles multi-variable expressions",
+      "description": "Expressions using multiple variables (e.g. x^2 + y^2) correctly substitute all provided variables and return the right value.",
+      "max_score": 15
+    },
+    {
+      "name": "Returns numeric result",
+      "description": "The function returns a plain JavaScript number, not a string or a library-specific object.",
+      "max_score": 10
+    }
+  ]
+}

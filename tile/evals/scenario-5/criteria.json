@@ -1,0 +1,32 @@
+{
+  "context": "This criteria evaluates correct usage of the library's matrix construction and utility functions. It checks that identity(), diag(), reshape(), and matrix() are used appropriately and that results are correctly converted between Matrix objects and plain arrays.",
+  "type": "weighted_checklist",
+  "capability_tested": "Matrix Creation and Indexing",
+  "checklist": [
+    {
+      "name": "Uses identity() for identity matrix",
+      "description": "createIdentityMatrix uses the library's identity() function to produce the identity matrix rather than constructing it manually with loops.",
+      "max_score": 25
+    },
+    {
+      "name": "Uses matrix() for dense matrix creation",
+      "description": "matrixFromRows uses the library's matrix() function with the 'dense' format to create a Matrix instance from the 2D array.",
+      "max_score": 20
+    },
+    {
+      "name": "Uses diag() to extract diagonal",
+      "description": "getDiagonal uses the library's diag() function to extract the main diagonal elements from a matrix, rather than manually indexing elements.",
+      "max_score": 25
+    },
+    {
+      "name": "Uses reshape() for reshaping",
+      "description": "reshapeMatrix uses the library's reshape() function to convert the flat array into the target shape, rather than implementing reshaping manually.",
+      "max_score": 20
+    },
+    {
+      "name": "Correct array/Matrix conversions",
+      "description": "Functions correctly convert between library Matrix objects and plain JavaScript arrays where required by the API (e.g. toArray() or valueOf()).",
+      "max_score": 10
+    }
+  ]
+}
